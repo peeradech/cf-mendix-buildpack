@@ -28,7 +28,7 @@ We push an mda (Mendix Deployment Archive) that was built by the Mendix Business
 
 We can also push a project directory. This will move the build process (using mxbuild) to Cloud Foundry:
 
-    cd <PROJECT DIR>; cf push -b https://github.com/mendix/cf-mendix-buildpack -t 180
+    cd <PROJECT DIR>; cf push <YOUR_APP> -b https://github.com/mendix/cf-mendix-buildpack -t 180
 
 Note that you might need to increase the startup timeout to prevent the database from being partially synchronized. This can be done either by specifying the `-t 180` parameter like above, or by using the `CF_STARTUP_TIMEOUT` environment variable (in minutes) from the command line.
 
